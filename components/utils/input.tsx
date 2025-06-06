@@ -32,12 +32,13 @@ export type InputVariants = VariantProps<typeof inputVariants>;
 function Input({
   className,
   variant,
-  size,
+  size: size,
   icon: Icon,
   ...props
-}: React.ComponentProps<"input"> & { icon?: React.ElementType } & VariantProps<
-    typeof inputVariants
-  >) {
+}: React.ComponentProps<"input"> & {
+  size?: string;
+  icon?: React.ElementType;
+} & VariantProps<typeof inputVariants>) {
   return (
     <div className="relative flex items-center">
       {Icon != null && (

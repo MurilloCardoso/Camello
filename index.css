@@ -9,7 +9,79 @@
 }
 :root {
   --font-inter: 'Inter', sans-serif;
+  --radius: 0.625rem;
+  --color-alert-confirm:green;
+  --color-alert-warning:rgb(51,42,39);
+  --color-text-warning:rgb(231,187,28);
+  --color-alert-error:rgb(39,25,38);
+  
+  --color-alert-awaiting:rgb(21,28,43);
+  --color-surface-empty:rgb(55,65,81);
+    --color-border: #e5e7eb;
+    --color-background: #ffffff;
+    --color-foreground: #111827;
+    --color-primary-grey:rgb(24,33,47);
+    --color-surface-dark:rgb(26,41,75);
+    --color-surface-light: rgb(48,99,235);
+    --color-primary-white:rgb(249,250,251);
 }
 body{
   font-family:  "Inter";
 }
+
+
+
+
+.dark {
+  --color-border: #374151;
+  --color-background: #121212;
+  --color-foreground: #f9fafb;
+}
+
+/* Base layer */
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+    .bg-primary-white{
+        background-color: var(--color-primary-white);
+    }
+    .bg-primary-grey {
+        background-color: var(--color-primary-grey);
+    }
+    .text-text-warning {
+        color: var(--color-text-warning);
+    }
+    .bg-alert-error {
+      background-color: var(--color-alert-error);
+    }
+    .bg-surface-dark {
+      background-color: var(--color-surface-dark);
+    }
+    .bg-surface-light {
+      background-color: var(--color-surface-light);
+    }
+    .bg-surface-empty {
+      background-color: var(--color-surface-empty);
+    }
+    .bg-alert-confirm {
+      background-color: var(--color-alert-confirm);
+    }
+
+    .bg-alert-warning {
+      background-color: var(--color-alert-warning);
+    }
+
+    .bg-alert-awaiting {
+      background-color: var(--color-alert-awaiting);
+    }
+  }

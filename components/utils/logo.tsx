@@ -1,22 +1,40 @@
 import { Link } from "react-router-dom";
+import { useTheme } from "../../context/ThemeContext";
 
 interface LogoProps {
-  imageSrc: string;
+  imageSrcLight: string;
+  imageSrcDark: string;
   text: string;
   to?: string;
   className?: string;
 }
 
 export default function Logo({
-  imageSrc,
+  imageSrcLight,
+  imageSrcDark,
   text,
   to = "/",
   className = "",
 }: LogoProps) {
+  const { theme } = useTheme();
   const content = (
     <div className={`flex items-center w-full gap-2 ${className}`}>
-      <img src={imageSrc} alt="Logo" className="w-10 h-10 object-contain" />
-      <span className="text-xl font-semibold ">{text}</span>
+      {theme !== "light" ? (
+        <img
+          src={imageSrcLight}
+          alt="Logo"
+          className="object-contain w-10 h-10"
+        />
+      ) : (
+        <img
+          src={imageSrcDark}
+          alt="Logo"
+          className="object-contain w-10 h-10"
+        />
+      )}
+      <span className="text-xl font-semibold text-black dark:text-white ">
+        {text}
+      </span>
     </div>
   );
 
