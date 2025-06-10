@@ -1,54 +1,34 @@
-# React + TypeScript + Vite
+# 🐫 Camello – Seu farejador de promoções gamers
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Camello é um projeto de **portfólio pessoal disfarçado de site de games**, com a proposta de **informar, alertar e indicar promoções**, **jogos indie** incríveis e **jogos gratuitos** para quem não quer (ou não pode) gastar muito.
 
-Currently, two official plugins are available:
+Inspirado nas lendárias "feras da internet" que desenterram ofertas absurdas, o Camello assume esse papel: o **camelo da economia gamer**, sempre de olho nas melhores pechinchas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔍 Funcionalidades (em andamento)
 
-## Expanding the ESLint configuration
+- 🛒 Alertas de promoções em tempo real (futuro)
+- 🎮 Destaques semanais de jogos indie
+- 💸 Sessão de jogos grátis
+- 🗃️ Catálogo de jogos com tags e avaliações
+- 🧠 Interface leve, responsiva e intuitiva
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tecnologias Utilizadas
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- ⚛️ **React** — Biblioteca principal para construção da interface
+- 🧠 **TypeScript** — Tipagem estática para mais segurança e escalabilidade
+- ⚡ **Vite** — Empacotador rápido para desenvolvimento ágil
+- 🎨 **TailwindCSS** — Estilização moderna e flexível com classes utilitárias
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Como rodar o projeto localmente
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/camello.git
+cd camello
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento
+npm run dev
 ```
