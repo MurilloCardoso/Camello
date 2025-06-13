@@ -39,5 +39,18 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
     "vite": "^6.3.5"
-  }
+  },
+  "description": "Camello é um projeto de **portfólio pessoal disfarçado de site de games**, com a proposta de **informar, alertar e indicar promoções**, **jogos indie** incríveis e **jogos gratuitos** para quem não quer (ou não pode) gastar muito.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MurilloCardoso/Camello.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MurilloCardoso/Camello/issues"
+  },
+  "homepage": "https://github.com/MurilloCardoso/Camello#readme"
 }
